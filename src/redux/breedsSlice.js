@@ -1,10 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const breed_page_limit = 15;
+const breed_page_limit = 10;
 
-export const fetchBreeds = createAsyncThunk('breeds/getBreeds', async () => {
-    const res = await axios(`${process.env.REACT_APP_API_BASE_ENDPOINT}/breeds?limit=${breed_page_limit}`)
+export const fetchBreeds = createAsyncThunk('breeds/getBreeds', async (page) => {
+    const res = await axios(
+        `${process.env.REACT_APP_API_BASE_ENDPOINT}/breeds?page=${page ? page : 0}&limit=${breed_page_limit}`)
     return res.data
 })
 
@@ -13,6 +14,8 @@ export const breedsSlice = createSlice({
     initialState: {
         items: [],
         isLoading: false,
+        page: 0,
+        hasNextPage: true,
     },
     reducers: {},
     extraReducers: {
@@ -20,8 +23,11 @@ export const breedsSlice = createSlice({
             state.isLoading = true;
         },
         [fetchBreeds.fulfilled]: (state, action) => {
-            state.items = action.payload;
+            state.items = [...state.items, ...action.payload];
             state.isLoading = false;
+            state.page += 1;
+
+            action.payload.length < breed_page_limit ? state.hasNextPage = false : state.hasNextPage = true
         },
         [fetchBreeds.rejected]: (state, action) => {
             state.isLoading = false;
