@@ -13,24 +13,24 @@ export const breedsSlice = createSlice({
     name: 'breeds',
     initialState: {
         items: [],
-        isLoading: false,
+        status: 'idle',
         page: 0,
         hasNextPage: true,
     },
     reducers: {},
     extraReducers: {
         [fetchBreeds.pending]: (state, action) => {
-            state.isLoading = true;
+            state.status = 'loading';
         },
         [fetchBreeds.fulfilled]: (state, action) => {
             state.items = [...state.items, ...action.payload];
-            state.isLoading = false;
+            state.status = 'succeeded';
             state.page += 1;
 
             action.payload.length < breed_page_limit ? state.hasNextPage = false : state.hasNextPage = true
         },
         [fetchBreeds.rejected]: (state, action) => {
-            state.isLoading = false;
+            state.status = 'failed';
             state.error = action.error.message;
         },
     },
