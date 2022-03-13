@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { useParams, Redirect } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import './styles.css'
 
@@ -20,23 +20,26 @@ function ImageGalleryDetail() {
         getPhoto()
     }, [photo_id])
 
-
-
     const imageInfo = useSelector((state) => {
-        console.log(state.imageGallery.items)
-        return (state.imageGallery.items.find((item) => item.image.id === Number(photo_id)))
-    }
-    );
+        const data = state.imageGallery.items.find((item) => {
+            return item.id === photo_id
+        })
+        return data
+    });
 
+    // I rendered "{!imageInfo && <div>NO DETAILED INFORMATION ABOUT CAT</div>}" instead of redirection
+    // if (!imageInfo) {
+    //     return <Redirect to="/ImageGallery" />
+    // }
 
     return (
         <>
             {photoURL && (
-                <div >
+                <div className='ImageGalleryDetailElementContainer'>
                     <img className='ImageGalleryDetailElementImage' src={photoURL} alt='Cats' />
-                    <h1>Cat Info</h1>
-                    {imageInfo && <pre>{JSON.stringify(imageInfo, null, 2)}</pre>}
-                    {!imageInfo && <p>NO DETAILED INFORMATION ABOUT CAT</p>}
+                    <h1>Cat Info (JSON)</h1>
+                    {imageInfo && <div>{JSON.stringify(imageInfo, null, 2)}</div>}
+                    {!imageInfo && <div>NO DETAILED INFORMATION ABOUT CAT</div>}
                 </div>
             )}
         </>
