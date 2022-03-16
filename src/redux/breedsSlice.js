@@ -17,12 +17,13 @@ export const breedsSlice = createSlice({
         page: 0,
         hasNextPage: true,
     },
-    reducers: {},
+    reducers: {}, //blank because i used "createAsyncThunk + extraReducers"
     extraReducers: {
         [fetchBreeds.pending]: (state, action) => {
             state.status = 'loading';
         },
         [fetchBreeds.fulfilled]: (state, action) => {
+            // if there is "nextpage navigation", we dont need to preserve previous data so we would use "state.items = [action.payload];" instead below
             state.items = [...state.items, ...action.payload];
             state.status = 'succeeded';
             state.page += 1;

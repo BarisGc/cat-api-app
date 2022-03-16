@@ -12,7 +12,7 @@ function Detail() {
     const { breed_customname } = useParams();
 
     useEffect(() => {
-
+        // I dont use redux state here because i want that if users refresh the page, they can achieve the information. 
         axios(`${process.env.REACT_APP_API_BASE_ENDPOINT}/breeds/search?q=${breed_customname}`)
             .then((res1) => res1.data)
             .then(detailData => {
