@@ -14,5 +14,13 @@
     width: 600px;
     height: 400px;
     object-fit: cover;
+}
 
+.ImageGalleryItemsHeader h1 {
+    font-size: 4vh;
+}
+
+.ImageGalleryItemsHeader h2 {
+    font-size: 2vh;
+    color: crimson;
 }
