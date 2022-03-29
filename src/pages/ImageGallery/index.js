@@ -31,11 +31,16 @@ function ImageGallery() {
 
     return (
         <div >
-            <h1 className='ImageGalleryItemsHeader'><i>ImageGallery (Random Cat Photos)</i></h1>
+            <div className='ImageGalleryItemsHeader'>
+                <h1><i>ImageGallery<br></br> (Random Cat Photos)</i></h1>
+                <h2><i>Click the Photo for Detailed Info About the Cat</i></h2>
+            </div>
             {status === 'loading' && <Loading />}
-            {status === 'succeeded' && data.map((element) =>
-                <Item key={element.id} element={element} />)}
-        </div>
+            {
+                status === 'succeeded' && data.map((element) =>
+                    <Item key={element.id} element={element} />)
+            }
+        </div >
     )
 }
 
