@@ -27,10 +27,9 @@ function ImageGalleryDetail() {
         return data
     });
 
-    // I rendered "{!imageInfo && <div>NO DETAILED INFORMATION ABOUT CAT</div>}" instead of redirection
-    // if (!imageInfo) {
-    //     return <Redirect to="/ImageGallery" />
-    // }
+   if (!imageInfo) {
+        return <Redirect to="/" />
+    }
 
     return (
         <>
@@ -39,7 +38,7 @@ function ImageGalleryDetail() {
                     <img className='ImageGalleryDetailElementImage' src={photoURL} alt='Cats' />
                     <h1>Cat Info (JSON)</h1>
                     {imageInfo && <div>{JSON.stringify(imageInfo, null, 2)}</div>}
-                    {!imageInfo && <div>NO DETAILED INFORMATION ABOUT CAT</div>}
+                    {!imageInfo.url && <div>NO DETAILED INFORMATION ABOUT CAT</div>}
                 </div>
             )}
         </>
