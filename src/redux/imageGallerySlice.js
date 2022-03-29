@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-// image_gallery/getPhotos nereden geliyor nereye gidiyor?
 export const fetchAllPhotos = createAsyncThunk('image_gallery/getAllPhotos', async () => {
     const res = await axios(
         `${process.env.REACT_APP_API_BASE_ENDPOINT}/images/search?limit=30&order=ASC`)
