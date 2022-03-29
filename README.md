@@ -1,5 +1,4 @@
 # Project Name: *Cat-Api-App*
-
 ### Project Deployment:
 Please, click > [Netlify](https://cat-api-app-barisd.netlify.app/)
 ### Project Main Goal: 
