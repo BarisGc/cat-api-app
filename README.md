@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Project Name: *Cat-Api-App*
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Project Deployment:
+Please, click > [Netlify](https://cat-api-app-barisd.netlify.app/)
+### Project Main Goal: 
+- Building "Cat-Api-App" to practice how to handle api requests especially using Postman, how to use api responses in Front-End and also to practice react-redux (state management), react-router(for routing).
+### Project Sub-Goals:
+- createAsyncThunk
+- To experience "react-masonry-css" library
+- To practice "Axios" library, "promise" and "Try-Catch" structures
+- Using useHistory hook for redirection so getting some errors like "undefined value of a paramter" while navigating or due to state changes can be prevented
+### Completed: 
+- Yes
+### Notes:
+ Normalization is the process of reorganizing data so that it meets two basic requirements:
+- There is no redundancy of data, all data is stored in only one place.
+- Data dependencies are logical,all related data items are stored together.
+- Performance increases; 
+- For example: 
+  - No need "array.find" method which checks every element in array to find a searched element.
+  - Managing crud operations easier  
+### Frameworks/Libraries:
+- React, React-Redux, React-Router, Redux-Toolkit, NanoId
+### Database:
+- No
+### Other Tools:
+- Postman, VS Code, Photopea, Adobe Photoshop
+### Mobile-Responsive:
+- No
+### Git:
+- Please, click > [GitHub](https://github.com/BarisGc/contacts-app)
+### Git Log:
+- Current
+### Chrome extensions:
+- React Developer Tools, Redux DevTools, WhatFont, ColorZilla, Page Ruler Redux
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
