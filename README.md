@@ -19,7 +19,7 @@ Please, click > [Netlify](https://cat-api-app-barisd.netlify.app/)
 ### Other Tools:
 - Postman, VS Code, Photopea, Adobe Photoshop
 ### Mobile-Responsive:
-- No
+- Mostly
 ### Git:
 - Please, click > [GitHub](https://github.com/BarisGc/cat-api-app)
 ### Git Log:
